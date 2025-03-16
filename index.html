@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<meta property='og:title' content='GAEA: A Geolocation Aware Conversational Model'/>
+<meta property='og:image' content=''/>
+<meta property='og:description' content=''/>
+<meta property='og:url' content='https://github.com/UCF-CRCV/GAEA'/>
+<meta property='og:image:width' content='1200' />
+<meta property='og:image:height' content='663' />
+<!-- TYPE BELOW IS PROBABLY: 'website' or 'article' or look on https://ogp.me/#types -->
+<meta property="og:type" content='website'/>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VZKE74FPW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9VZKE74FPW');
+</script>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="GAEA: A Geolocation Aware Conversational Model">
+  <meta name="keywords" content="Stereotype-Bias Benchmark">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GAEA: A Geolocation Aware Conversational Model</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/tab_gallery.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="juxtapose/css/juxtapose.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/magnifier.js"></script>
+  <link href="https://fonts.cdnfonts.com/css/menlo" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/image_card_fader.css">
+  <link rel="stylesheet" href="./static/css/image_card_slider.css">
+
+</head>
+
+<style>
+  @import url('https://fonts.cdnfonts.com/css/menlo');
+</style>
+
+
+<body>
+  <section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">GAEA: A Geolocation Aware Conversational Model</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://www.linkedin.com/in/roncamposj/">Ron Campos</a><sup>1<b style="font-size: 20px;">*</b></sup>,</span>
+            <span class="author-block"><a href="https://ashmalvayani.github.io/">Ashmal Vayani</a><sup>1<b style="font-size: 20px;">*</b></sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=OHC7c90AAAAJ&hl=en">Parth Parag Kulkarni</a><sup>1<b style="font-size: 20px;">*</b></sup>,</span>
+            <span class="author-block"><a href="https://www.rohitg.xyz/">Rohit Gupta</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=vquoiHsAAAAJ&hl=en">Aritra Dutta</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en&oi=ao">Mubarak Shah</a><sup>1</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><b style="font-size: 20px;">*</b> Equally contributing first authors</span>
+            <br>
+            <span class="author-block"><sup>1</sup>Center for Research in Computer Vision, University of Central Florida</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </span>
+                <span class="link-block">
+                  <a href="https://huggingface.co/collections/ucf-crcv/gaea-67d514a61d48eb1708b13a08" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+                </span>
+              <span class="link-block">
+                <a href="https://github.com/UCF-CRCV/GAEA" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <span class="link-block">
+                <a href="#bibtex"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-obp"></i>
+                  </span>
+                  <span>BibTex</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+        <p align="justify"> 
+          Inspired by the challenges in training conversational Large Multimodal Models (LMMs) for geolocalization and the lack of comprehensive datasets in this domain, we introduce <b><i>GAEA</i></b>. This open-source conversational model uniquely combines global-scale geolocalization with rich, interactive discussions about locations, landmarks, and services. To support its training, we curate <b><i>GAEA-1.6M</i></b>, a diverse dataset of 1.6M samples, integrating images, metadata, and knowledge-driven captions. We also propose <b><i>GAEA-Bench</i></b> a benchmark designed to assess the conversational and geolocalization capabilities of LMMs. </p>
+        <!-- <br> -->
+
+
+      <div class="column">
+        <div style="text-align:center;" >
+            <!-- <h4 class="subtitle has-text-centered"> -->
+            <img src="./static/images/teaser.jpg">
+            <!-- </h4> -->
+            
+            <div class="content has-text-justified">
+                <p align="justify"> <b> <span>Figure: Data Collection and Annotation Pipeline.</span></b> <b> <span style="color: blue;">(Left)</span></b> GAEA-1.6M includes geographically diverse visual samples from various data sources, such as MP-16, GLD-v2, and CityGuesser68k. <b> <span style="color: blue;">(Middle)</span></b> We also incorporate OpenStreetMap (OSM) metadata and auxiliary context for each image, ranging from climate zones to geographical clues about the country. <b> <span style="color: blue;">(Right)</span></b> Using open-source LLMs and GPT-4o, we generate four diverse question-answer pairs across geolocation, reasoning, and conversational subsets. </p>
+
+
+            </div>
+        </div>
+      </div>
+
+
+    <br><br>
+    </div>
+  </div>
+
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+                 <!-- Visual Effects. -->
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+          Image geolocalization, in which, traditionally, an AI model predicts the precise GPS coordinates of an image is a challenging task with many downstream applications. However, the user cannot utilize the model to further their knowledge other than the GPS coordinate; the model lacks an understanding of the location and the conversational ability to communicate with the user. In recent days, with tremendous progress of large multimodal models (LMMs)—proprietary and open-source—researchers attempted to geolocalize images via LMMs. However, the issues remain unaddressed; beyond general tasks, for more specialized downstream tasks, one of which is geolocalization, LMMs struggle. In this work, we propose to solve this problem by introducing a conversational model <i>GAEA</i> that can provide information regarding the location of an image, as required by a user. No large-scale dataset enabling the training of such a model exists. Thus we propose a comprehensive dataset <i>GAEA-1.6M</i> with 800K images and around 1.6M question-answer pairs constructed by leveraging OpenStreetMap (OSM) attributes and geographical context clues. For quantitative evaluation, we propose a diverse benchmark comprising 4K image-text pairs to evaluate conversational capabilities equipped with diverse question types. We consider 11 state-of-the-art open-source and proprietary LMMs and demonstrate that <i>GAEA</i> significantly outperforms the best open-source model, LLaVA-OneVision by 25.69% and best proprietary model, GPT-4o by 8.28%. We will publicly release our dataset and codes. <br>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"> <i>GAEA</i> is the first open-source conversational model for conversational capabilities equipped with global-scale geolocalization. </h2>
+        <div class="content has-text-justified">
+          <p>
+          <h5> <b> Main contributions: </b></h5>
+           <ol>
+            <li> <b>GAEA-1.6M: A Diverse Training Dataset. </b> We propose GAEA-1.6M, a new dataset designed for training conversational image geolocalization models, incorporating diverse visual and contextual data.</li>
+            <li> <b>GAEA-Bench: Evaluating Conversational Geolocalization. </b> To assess conversational capabilities in geolocalization, we introduce GAEA-Bench, a benchmark featuring various question-answer formats.</li>
+            <li> <b>GAEA: An Interactive Geolocalization Chatbot.</b> We present GAEA, a conversational chatbot that extends beyond geolocalization to provide rich contextual insights about locations from images.</li>
+            <li> <b>Benchmarking Against State-of-the-Art LMMs.</b> We quantitatively compare our model’s performance against 8 open-source and 3 proprietary LMMs, including GPT-4o and Gemini-2.0-Flash.</li>
+           </ol>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section">
+  
+    <!--/ Matting. -->
+    <div class="container is-max-desktop">
+    
+    <!-- Latent space editing applications -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">GAEA-1.6M Dataset Overview</h2>
+        
+        <div class="content has-text-centered">
+            <img src="./static/images/GeoLLM_Flow.jpg"  style="max-width:100%">
+              <div class="content has-text-justified">
+                <p align="justify"> <b> <span>Figure: Data Collection and Annotation Pipeline.</span></b> <b> <span style="color: blue;">(Left)</span></b> GAEA-1.6M includes geographically diverse visual samples from various data sources, such as MP-16, GLD-v2, and CityGuesser68k. <b> <span style="color: blue;">(Middle)</span></b> We also incorporate OpenStreetMap (OSM) metadata and auxiliary context for each image, ranging from climate zones to geographical clues about the country. <b> <span style="color: blue;">(Right)</span></b> Using open-source LLMs and GPT-4o, we generate four diverse question-answer pairs across geolocation, reasoning, and conversational subsets. </p>
+            </div>
+        </div>
+
+        <br><br>
+
+
+            <!--/ Matting. -->
+    <div class="container is-max-desktop">
+
+    <!-- Latent space editing applications -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">GAEA-Bench Curation Pipeline</h2>
+
+        <div class="content has-text-centered">
+            <img src="./static/images/GeoLLM-Bench.jpg"  style="max-width:100%">
+            <p class="content has-text-justified">
+
+            <div class="content has-text-justified">
+                <p align="justify"> <b> <span>Figure: Overview of <i>GAEA-Bench</i>.</span></b> GAEA-Bench is designed to evaluate the conversational abilities of various LMMs across different question types, including MCQs, T/F, and both short and long VQAs. We have carefully selected a subset of 4k samples from MP-16 and generated corresponding OSM metadata to generate QA pairs using GPT-4o. GAEA-Bench aims to fill the gap in conversational benchmarks by incorporating geolocalization capabilities. </p>
+            </div>
+
+
+            <img src="./static/images/GeoLLM_Eval_Pipelin_conv.jpg"  style="max-width:50%">
+            <p class="content has-text-justified">
+            <div class="content has-text-justified">
+                <p align="justify"> <b> <span>Figure</span></b>: The Evaluation pipeline highlights various question types we introduce in our <i>GAEA-Bench</i>. We use GPT-4o as a judge to score such responses on different criterion. </p>
+            </div>
+
+            <img src="./static/images/GeoLLM_Eval_Pipelin_pred.jpg"  style="max-width:60%">
+            <p class="content has-text-justified">
+            <div class="content has-text-justified">
+                <p align="justify"> <b> <span>Figure</span></b>: Our classification accuracy pipeline evaluates city and country predictions by comparing them against ground truth annotations derived from GPS coordinates, with GPT-4o serving as the evaluator. </p>
+
+                <br>
+                <br>
+            </div>
+
+
+        <div class="content has-text-justified">
+            <h3 class="title is-3 has-text-centered">Data Statistics</h3>
+
+            <table border="1" cellspacing="0" cellpadding="5" style="width: 50%; margin: auto;">
+              <thead>
+                  <tr style="background-color:whitesmoke;">
+                      <th colspan="1" align="center" style="font-size: 13px;">Statistic</th>
+                      <th colspan="1" align="center" style="font-size: 13px;">Value</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr style="background-color:beige;">
+                      <td colspan="1" style="font-size: 13px;">Total images</td>
+                      <td colspan="1" align="center" style="font-size: 13px;">822,951</td>
+                  </tr>
+                  <tr style="background-color:whitesmoke;">
+                      <td colspan="1" style="font-size: 13px;">Total cities / countries</td>
+                      <td colspan="1" align="center" style="font-size: 13px;">41,481 / 234</td>
+                  </tr>
+                  <tr style="background-color:beige;">
+                      <td colspan="1" style="font-size: 13px;">Total questions</td>
+                      <td colspan="1" align="center" style="font-size: 13px;">1,580,531</td>
+                  </tr>
+                  <tr style="background-color:whitesmoke;">
+                      <td colspan="1" style="font-size: 13px;">Total geo-localization questions</td>
+                      <td colspan="1" align="center" style="font-size: 13px;">822,951</td>
+                  </tr>
+                  <tr style="background-color:beige;">
+                      <td colspan="1" style="font-size: 13px;">Total explanatory captions</td>
+                      <td colspan="1" align="center" style="font-size: 13px;">384,947</td>
+                  </tr>
+                  <tr style="background-color:whitesmoke;">
+                      <td colspan="1" style="font-size: 13px;">Total open-ended questions</td>
+                      <td colspan="1" align="center" style="font-size: 13px;">267,668</td>
+                  </tr>
+                  <tr style="background-color:beige;">
+                      <td colspan="1" style="font-size: 13px;">Total multiple-choice questions</td>
+                      <td colspan="1" align="center" style="font-size: 13px;">48,673</td>
+                  </tr>
+                  <tr style="background-color:whitesmoke;">
+                      <td colspan="1" style="font-size: 13px;">Total true/false questions</td>
+                      <td colspan="1" align="center" style="font-size: 13px;">56,292</td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+
+        <br><br>
+
+
+        <div class="content has-text-justified">
+          <div class="content has-text-centered">
+            <h3 class="title is-3 has-text-centered">Qualitative Example of GAEA-1.6M</h3>
+          <img src="./static/images/qual_osm_metadata.jpg" style="max-width:100%"> 
+          </div>
+          <p align="justified"> <b> <span>Figure</span></b>: We showcase various question-types including multiple-choice, true/false, short and long VQAs generated using an open-source model on our GAEA-1.6M dataset. We carefully select geographical tags from OSM metadata to generate diverse question types. </p>
+      </div>
+      </div>
+          
+      </div>
+    </div>
+
+    <br><br>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-3">Benchmarking and Evaluations</h2>
+
+        <div class="content has-text-justified">
+        <p> GAEA is the first model explicitly trained on 1.6 million instructions, incorporating reasoning-based question-answer pairs to provide transparent geolocation predictions, unlike traditional black-box models. We benchmark GAEA against state-of-the-art LMMs and geo-localization models, evaluating performance on diverse question types and standard benchmarks while introducing new datasets for city and country classification. </p>
+        </div>
+
+        <h3 class="title is-4 has-text-justified">Evaluation on GAEA-Bench</h3>
+        <div class="content has-text-centered">
+          <div class="content has-text-justified">
+            <p><b>(1)</b> GAEA achieves the highest average accuracy (66.06%) across decision-making and short-form VQA questions, surpassing GPT-4o by 8.28% and outperforming the best open-source model by 25.69%. However, both open-source and proprietary models struggle with short-form questions, with GPT-4o's accuracy dropping significantly from long to short VQAs.
+            </p>
+          </div>
+          
+          <img src="./static/images/GAEA-Benc-Eval.png"  style="max-width:100%">
+          <img src="./static/images/question_types_stats.jpg"  style="max-width:80%">
+          <p align="justified"> <b> <span>Figure</span></b>: We benchmark 11 open-source and proprietary LMMs on <i>GAEA-Bench</i>. Notably, <i>GAEA</i> outperforms all open-source models and fares higher than the proprietary models on decision making questions <i>(MCQs and TFs)</i>. We provide the relative performance change for each model compared to <i>GAEA</i>. </p>
+          <br/>
+        </div>
+
+        <h3 class="title is-4 has-text-justified">Standard Geolocalization Evaluation</h3>
+        <div class="content has-text-centered">
+          <div class="content has-text-justified">
+            <p><b>(2)</b> GAEA performs competitively against specialized geo-localization models, achieving the second-best performance on IM2GPS3k, surpassing GaGA by 2.5% at 25 km and 3.66% at the country level, while also outperforming GeoCLIP across all thresholds. On IM2GPS, it surpasses GaGA at 25 km and 2,500 km, and on GSW-15K, it outperforms GeoCLIP and GeoDecoder in city-level geolocation.</p>
+          </div>
+          <img src="./static/images/Geolocalization_results.png"  style="max-width:70%">
+          <p align="justified"> <b> <span>Figure</span></b>: We benchmark the performance of various specialized models on standard geolocation datasets. GAEA demonstrates competitive results, outperforming GaGA on multiple distance thresholds in both IM2GPS and IM2GPS3k. </p>
+          <br/>
+        </div>
+
+        <h3 class="title is-4 has-text-justified">Classification Accuracy Results</h3>
+        <div class="content has-text-centered">
+          <div class="content has-text-justified">
+            <p> <b>(3)</b> GAEA outperforms recent LMMs, including LLaVA-OneVision, InternVL, and GLM-4V-9B, in city- and country-level classification across three new datasets, demonstrating its extensive geographical coverage and superior geolocation capabilities.</p>
+          </div>
+          <img src="./static/images/City_Country_results.jpg"  style="max-width:50%">
+          <p align="justified"> <b> <span>Figure</span></b>: Classification accuracy for both city and country labels, where GAEA establishes itself as a strong baseline, surpassing several recent LMMs in performance. </p>
+          <br/>
+        </div>
+
+    
+    </div>
+ </div>
+
+            
+
+
+        <h3 class="title is-4 has-text-justified">Qualitative examples of various LMMs on GAEA-Bench</h3> 
+        <p>We further present various question types in our GAEA-Bench and demonstrate how various LMMs respond to conversational questions equipped with the geo-localization capabilities. Notably, GAEA comprehends the geographic location of the image and responds with the correct output.</p>
+            <div class="item item-sunflowers">
+                <img src="./static/images/queston_types_qual.jpg" style="max-width:100%" align="center">
+            </div>
+            <br>
+            <br>
+
+
+        <h3 class="title is-4 has-text-justified">Conclusion</h3>
+        <div class="content has-text-justified">
+          <p>
+            We introduced GAEA, the first interactive conversational model with specialized geolocation capabilities, explicitly trained on a large-scale conversational dataset, GAEA-1.6M. We meticulously designed the dataset to enhance GAEA’s reasoning, conversational abilities, and geolocation accuracy. We curated geolocalizable images from MP-16, GLDv2, and CityGuessr68k, enriching them with auxiliary context and metadata, such as geographic clues, and climate zones. In addition to a high-quality instruction set, we present GAEA-Bench, a comprehensive benchmark that evaluates LMMs across multiple question types, including MCQs, True/False, short- and long-VQAs. Our results show that GAEA outperforms recent LMMs on GAEA-Bench, demonstrating strong geolocation and conversational capabilities by leveraging OpenStreetMap (OSM) data. These findings establish GAEA as a strong baseline for future research in geolocalization. </p>
+
+            <br>
+            <p>For additional details about GAEA-Bench evaluation and experimental results of GAEA, please refer to our main paper. Thank you! </p>
+        </div>
+
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title"><a id="bibtex">BibTeX</a></h2>
+    <pre><code>@article{
+}
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            Website adapted from the following <a href="https://mingukkang.github.io/GigaGAN/">source code</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="juxtapose/js/juxtapose.js"></script>
+
+<script>
+var slider;
+let origOptions = {
+    "makeResponsive": true,
+    "showLabels": true,
+    "mode": "horizontal",
+    "showCredits": true,
+    "animate": true,
+    "startingPosition": "50"
+};
+
+const juxtaposeSelector = "#juxtapose-embed";
+const transientSelector = "#juxtapose-hidden";
+
+  inputImage.src = "./static/images/".concat(name, "_input.jpg")
+  outputImage.src = "./static/images/".concat(name, "_output.jpg")
+
+  let images = [inputImage, outputImage];
+  let options = slider.options;
+  options.callback = function(obj) {
+      var newNode = document.getElementById(obj.selector.substring(1));
+      var oldNode = document.getElementById(juxtaposeSelector.substring(1));
+      console.log(obj.selector.substring(1));
+      console.log(newNode.children[0]);
+      oldNode.replaceChild(newNode.children[0], oldNode.children[0]);
+      //newNode.removeChild(newNode.children[0]);
+      
+  };
+  
+  slider = new juxtapose.JXSlider(transientSelector, images, options);
+};
+
+
+
+(function() {
+    slider = new juxtapose.JXSlider(
+        juxtaposeSelector, origImages, origOptions);
+    //document.getElementById("left-button").onclick = replaceLeft;
+    //document.getElementById("right-button").onclick = replaceRight;
+})();
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  // expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = name;
+  // Show the container element (hidden with CSS)
+  // expandImg.parentElement.style.display = "block";
+
+$(".flip-card").click(function() {
+            console.log("fading in")
+            div_back = $(this).children().children()[1]
+            div_front = $(this).children().children()[0]
+            // console.log($(this).children("div.flip-card-back"))
+            console.log(div_back)
+            $(div_front).addClass("out");
+            $(div_front).removeClass("in");
+
+            $(div_back).addClass("in");
+            $(div_back).removeClass("out");
+
+});
+
+$(".flip-card").mouseleave(function() {
+            console.log("fading in")
+            div_back = $(this).children().children()[1]
+            div_front = $(this).children().children()[0]
+            // console.log($(this).children("div.flip-card-back"))
+            console.log(div_back)
+            $(div_front).addClass("in");
+            $(div_front).removeClass("out");
+
+            $(div_back).addClass("out");
+            $(div_back).removeClass("in");
+
+});
+
+</script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>    
+
+</body>
+</html>
