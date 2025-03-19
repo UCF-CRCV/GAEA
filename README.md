@@ -193,3 +193,22 @@ Run the following command for evaluation
 > <p align="justify"> <b> <span style="color: blue;">Figure:</span></b> Classification accuracy for both city and country labels, where `GAEA` establishes itself as a strong baseline, surpassing several recent LMMs in performance. </p>
 
 <hr />
+
+
+## 📂 License
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. The images in `GAEA` and `GAEA-Bench` dataset are collected from public domains and sources (refer to [main paper]() for more details) and are for academic research use only. 
+By using `GAEA` and `GAEA-Bench`, you agree not to use the dataset for any harm or unfair discrimination. Please note that the data in this dataset may be subject to other agreements. Video copyrights belong to the original dataset providers, video creators, or platforms.
+
+## 📜 Citation
+If you find our work and this repository useful, please consider giving our repo a star and citing our paper as follows:
+```bibtex
+```
+
+## 🙏 Acknowledgements
+
+This repository has borrowed Video-LMM evaluation code from [TimeChat](https://github.com/RenShuhuai-Andy/TimeChat) and [LLaMA-VID](https://github.com/dvlab-research/LLaMA-VID). We also borrowed partial code from [ALM-Bench](https://github.com/mbzuai-oryx/ALM-Bench/), [CVRR-Evaluation-Suit](https://github.com/mbzuai-oryx/CVRR-Evaluation-Suite) repository. We thank the authors for releasing their code.
+
+---
+<p align="center">
+   <a href="https://www.crcv.ucf.edu/"><img src="Assets/crcv_ucf.jpg" width="500" height="90"></a>
+</p>
