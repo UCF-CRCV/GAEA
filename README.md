@@ -69,7 +69,7 @@
 
 ### Conversational Evaluation Pipeline
 <p align="center">
-   <img src="Assets/GeoLLM_Eval_Pipelin_conv.jpg" alt="GeoLLM-Bench"></a>
+   <img src="Assets/GeoLLM_Eval_Pipelin_conv.jpg" width="400" alt="GeoLLM-Bench"></a>
 </p>
 
 > <p align="justify"> <b> <span style="color: blue;">Figure:</span></b> The Evaluation pipeline highlights various question types we introduce in our <i>GAEA-Bench</i>. We use GPT-4o as a judge to score such responses on different criterion. </p>
@@ -79,7 +79,7 @@
 
 ### Classification Accuracy Evaluation Pipeline
 <p align="center">
-   <img src="Assets/GeoLLM_Eval_Pipelin_pred.jpg" alt="GeoLLM-Bench"></a>
+   <img src="Assets/GeoLLM_Eval_Pipelin_pred.jpg" width="500" alt="GeoLLM-Bench"></a>
 </p>
 
 > <p align="justify"> <b> <span style="color: blue;">Figure:</span></b> Our classification accuracy pipeline evaluates city and country predictions by comparing them against ground truth annotations derived from GPS coordinates, with GPT-4o serving as the evaluator. </p>
@@ -169,7 +169,7 @@ Run the following command for evaluation
 #### GAEA-Bench Evaluation
 <p align="center">
    <img src="Assets/GAEA-Benc-Eval.png" alt="GAEA-Bench-Eval"></a>
-   <img src="Assets/question_types_stats.jpg" alt="Question_Types"></a>
+   <img src="Assets/question_types_stats.jpg" width="500" alt="Question_Types"></a>
 </p>
 
 > <p align="justify"> <b> <span style="color: blue;">Figure:</span></b> We benchmark 11 open-source and proprietary LMMs on <i>GAEA-Bench</i>. Notably, <i>GAEA</i> outperforms all open-source models and fares higher than the proprietary models on decision making questions <i>(MCQs and TFs)</i>. We provide the relative performance change for each model compared to `GAEA`. </p>
@@ -178,7 +178,7 @@ Run the following command for evaluation
 
 #### Standard Geolocalization Evaluation Results
 <p align="center">
-   <img src="Assets/Geolocalization_results.png" alt="Geolocalization_Results"></a>
+   <img src="Assets/Geolocalization_results.png" width="500" alt="Geolocalization_Results"></a>
 </p>
 
 > <p align="justify"> <b> <span style="color: blue;">Figure:</span></b> We benchmark the performance of various specialized models on standard geolocation datasets. `GAEA` demonstrates competitive results, outperforming GaGA on multiple distance thresholds in both IM2GPS and IM2GPS3k. </p>
@@ -187,7 +187,7 @@ Run the following command for evaluation
 
 #### Classification Accuracy Evaluation Results
 <p align="center">
-   <img src="Assets/City_Country_results.jpg" alt="City_Country_Results"></a>
+   <img src="Assets/City_Country_results.jpg" width="400" alt="City_Country_Results"></a>
 </p>
 
 > <p align="justify"> <b> <span style="color: blue;">Figure:</span></b> Classification accuracy for both city and country labels, where `GAEA` establishes itself as a strong baseline, surpassing several recent LMMs in performance. </p>
