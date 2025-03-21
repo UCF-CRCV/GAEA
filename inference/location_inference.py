@@ -133,7 +133,7 @@ def process_json_file(files, results, temperature, full_output_path):
             video_filename = "/".join(file.split("/")[-2:])
         elif "GeoDE" in files[0]:
             video_filename = "/".join(file.split("/")[-3:])
-        elif "yfcc25600" in files[0]:
+        elif "yfcc26k" in files[0]:
             video_filename = "/".join(file.split("/")[-3:])
         else:
             video_filename = file.split("/")[-1]
@@ -202,7 +202,7 @@ def main():
         files = get_files_from_csv(image_dir, csv_data)
     else:
         # Process all images in directory
-        if "yfcc25600" in image_dir:
+        if "yfcc26k" in image_dir:
             files = glob(image_dir + "/**/**/*.jpg")
         else:
             files = glob(image_dir + "/*.jpg")
