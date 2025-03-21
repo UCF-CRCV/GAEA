@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script to evaluate model predictions using GPT-4 as a judge.
+Script to evaluate model predictions using GPT-4o-mini as a judge.
 """
 import os
 import json
