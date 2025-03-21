@@ -1,6 +1,6 @@
 #!/bin/bash
-# This script downloads both GAEA-Train and GAEA-Bench datasets from Huggingface
-# and organizes them into the specified directory structure.
+# This script downloads GAEA-1.6M dataset from Huggingface
+# and organizes the data into the specified directory structure.
 
 # Set Python path
 export PYTHONPATH=src:$PYTHONPATH
