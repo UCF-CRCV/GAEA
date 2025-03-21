@@ -39,7 +39,7 @@ def load_predictions(pred_path):
     predictions = {}
     for i in results:
         # Extract city (first part of the location)
-        predictions[i['filename']] = i['predicted_answer'].split(',')[0]
+        predictions[i['filename']] = i['predicted_answer'][0].split(',')[0]
     
     return predictions
 
