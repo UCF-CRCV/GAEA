@@ -20,7 +20,7 @@ JSONLS_DIR="${EVAL_DIR}/jsonls"
 OUTPUTS_DIR="${EVAL_DIR}/outputs"
 RESULTS_DIR="${EVAL_DIR}/results"
 
-# Define datasets and their paths with corresponding CSV data if needed
+# Define datasets and their paths with corresponding image folders if needed
 declare -A DATASETS=(
     ["cityguessr"]="path/to/cityguessr/images"
     ["dollarstreet"]="path/to/dollarstreet/images"
