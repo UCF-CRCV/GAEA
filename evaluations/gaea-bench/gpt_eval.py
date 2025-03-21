@@ -197,7 +197,7 @@ def main(json_path=None, json_folder=None, outfolder=None):
             process_json_file(pred_file, outfolder)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Prepare evaluation batches for GPT-4 judge")
+    parser = argparse.ArgumentParser(description="Prepare evaluation batches for GPT-4o-mini judge")
     parser.add_argument("--json_path", help="Location of a single prediction file")
     parser.add_argument("--json_folder", help="Folder where prediction files are located")
     parser.add_argument("--outfolder", required=True, help="Folder which all files will be saved")
