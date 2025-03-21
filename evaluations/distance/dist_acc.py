@@ -37,19 +37,14 @@ def distance_accuracy(targets, preds, distance_thresholds, faulty):
                     if gd <= dis:
                         correct[str(dis)] += 1
             except:
-                # print('Error in for i')
                 no_classifications.append(i)
                 continue
-        #print(gd, gps_gallery[preds[i]], targets[i], i)
     acc = {k:v/total for k,v in correct.items()}
 
     gd_avg = sum(gd_list)/total
     return acc, gd_avg, no_classifications
 
 targets = {}
-
-# if 'yfcc26k' in gt_path:
-#     breakpoint()
 
 yfcc4k = False
 if "yfcc4k" in gt_path:
@@ -68,7 +63,6 @@ with open(gt_path, 'r') as f:
         img_target = line[0] + extension
         targets[img_target] = [float(line[la]), float(line[lo])]
 
-        # targets[line[0]] = [float(line[2]), float(line[3])]
 
 if os.path.exists(pred_path):
     preds = json.load(open(pred_path))
