@@ -42,7 +42,7 @@
 1) **`GAEA-1.6M: A Diverse Training Dataset:`** We propose GAEA-1.6M, a new dataset designed for training conversational image geolocalization models, incorporating diverse visual and contextual data.
 2) **`GAEA-Bench: Evaluating Conversational Geolocalization:`** To assess conversational capabilities in geolocalization, we introduce GAEA-Bench, a benchmark featuring various question-answer formats.
 3) **`GAEA: An Interactive Geolocalization Chatbot:`** We present GAEA, a conversational chatbot that extends beyond geolocalization to provide rich contextual insights about locations from images.
-4) **`Benchmarking Against State-of-the-Art LMMs:`** We quantitatively compare our model’s performance against 8 open-source and 3 proprietary LMMs, including GPT-4o and Gemini-2.0-Flash.
+4) **`Benchmarking Against State-of-the-Art LMMs:`** We quantitatively compare our model's performance against 8 open-source and 3 proprietary LMMs, including GPT-4o and Gemini-2.0-Flash.
    
 <hr />
 
@@ -116,29 +116,63 @@ GAEA-1.6M dataset can be downloaded from our [huggingface](https://huggingface.c
 ```
 GAEA-1.6M/
 |–– MP-16/
-|   |–– img_1.jpg
-|   |–– img_2.jpg
-|   |–– ... # remaining images
-|–– GLD-v2/
-|   |–– landmark_img_1.jpg
-|   |–– landmark_img_2.jpg
-|   |–– ... # remaining images
-|–– City_Guessr/
-|   |–– random_sample_1.jpg
-|   |–– random_sample_2.jpg
+|   |–– ###/
+|   |   |–– ###/
+|   |   |   |–– ##########jpg
+|   |   |   |–– ... # remaining images
+|   |–– ... # remaining folders with similar structure
+|–– GLDv2/
+|   |–– #/
+|   |   |–– #/
+|   |   |   |–– #/
+|   |   |   |   |–– ##########.jpg
+|   |   |   |   |–– ... # remaining images
+|   |–– ... # remaining folders with similar structure
+|–– CityGuessr/
+|   |–– city_#_######.jpg
 |   |–– ... # remaining images
 ```
 
 Download the dataset
 ```shell
+# Download the GAEA-1.6M dataset
+cd scripts
+
+chmod +x download_gaea_train.sh
+./download_gaea_train.sh
+```
+
+Download the weights to Qwen2.5-VL
+```shell
+# Download Qwen2.5-VL base model
+git lfs install
+git clone https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct
 ```
 
 ### Installation
 ```shell
+conda create -n gaea python=3.10
+conda activate gaea
+
+pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+
+pip install -r requirements.txt
+pip install qwen-vl-utils
+pip install flash-attn==2.5.8 --no-build-isolation
+```
+
+Please install the latest transformers from git to finetune Qwen2.5-VL
+
+```
+pip install git+https://github.com/huggingface/transformers accelerate
 ```
 
 ### Training
 ```shell
+cd scripts
+
+chmod +x train_gaea.sh #make script executable.
+./train_gaea.sh
 ```
 
 ## Evaluation
@@ -146,21 +180,52 @@ Download the dataset
 GAEA-Bench dataset can be downloaded from our [huggingface](https://huggingface.co/datasets/ucf-crcv/GAEA-Bench). GAEA-Bench consists of 4k conversational QA pairs extended from MP-16 and OpenStreetMaps (OSM) in various question types, including MCQs, TF, and Short and Long VQAs. 
 
 ```shell
+# Download the GAEA-Bench dataset
+cd scripts
+
+chmod +x download_gaea_bench.sh
+./download_gaea_bench.sh
 ```
+
+### Preparing the dataset
+
+```shell
+# Organize the GAEA
+cd scripts
+
+chmod +x prepare_gaea_bench.sh
+./prepare_gaea_bench.sh
+```
+
 
 #### Conversational `GAEA-Bench` Evaluation
 Run the following command for evaluation
 ```shell
+cd scripts
+
+chmod +x run_gaea_bench.sh #make script executable.
+./run_gaea_bench.sh
 ```
 
 #### Standard Geolocalization Evaluation
-Run the following command for evaluation
+Install IM2GPS, IM2GPS3k, YFCC4k, YFCC26k, and GWS15k to run the evaluation. After installation, update the paths in the shell script and run the evaluation command.
+
 ```shell
+cd scripts
+
+chmod +x run_distance_metrics.sh #make script executable.
+./run_distance_metrics.sh
 ```
 
 #### Classification Accuracy Evaluation
-Run the following command for evaluation
+
+Install CityGuessr, GeoDE, and Dollar Street to run the evaluation. After installation, update the paths in the shell script and run the evaluation command.
+
 ```shell
+cd scripts
+
+chmod +x run_cc_preds.sh #make script executable.
+./run_cc_preds.sh
 ```
 
 
