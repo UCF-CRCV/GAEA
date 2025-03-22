@@ -13,7 +13,7 @@
 
 #### University of Central Florida
 
-[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)]()
+[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2503.16423)
 [![Dataset](https://img.shields.io/badge/Dataset-Access-<COLOR>)](https://huggingface.co/collections/ucf-crcv/gaea-67d514a61d48eb1708b13a08)
 [![Website](https://img.shields.io/badge/Project-Website-87CEEB)](https://ucf-crcv.github.io/GAEA/)
 
@@ -267,6 +267,15 @@ By using `GAEA` and `GAEA-Bench`, you agree not to use the dataset for any harm 
 ## 📜 Citation
 If you find our work and this repository useful, please consider giving our repo a star and citing our paper as follows:
 ```bibtex
+@misc{campos2025gaeageolocationawareconversational,
+      title={GAEA: A Geolocation Aware Conversational Model}, 
+      author={Ron Campos and Ashmal Vayani and Parth Parag Kulkarni and Rohit Gupta and Aritra Dutta and Mubarak Shah},
+      year={2025},
+      eprint={2503.16423},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2503.16423}, 
+}
 ```
 
 ## 🙏 Acknowledgements
