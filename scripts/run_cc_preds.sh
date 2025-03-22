@@ -14,7 +14,7 @@ BASE_DIR=$(pwd)
 
 # Paths configuration
 PRED_FOLDER="${BASE_DIR}/location_predictions/${MODEL_NAME}"
-GT_FOLDER="${BASE_DIR}/evaluations/city-country/ground_truth"
+GT_FOLDER="${BASE_DIR}/evaluations/city-country/ground-truth"
 EVAL_DIR="${BASE_DIR}/evaluations/city-country"
 JSONLS_DIR="${EVAL_DIR}/jsonls"
 OUTPUTS_DIR="${EVAL_DIR}/outputs"
@@ -29,9 +29,9 @@ declare -A DATASETS=(
 
 # Define CSV data paths which contain GT city and country names
 declare -A CSV_DATA=(
-    ["cityguessr"]="path/to/cityguessr_citygt.csv"
-    ["dollarstreet"]="path/to/dollarstreet_citygt.csv"
-    ["geode"]="path/to/geode_citygt.csv"
+    ["cityguessr"]="${GT_FOLDER}/cityguessr_citygt.csv"
+    ["dollarstreet"]="${GT_FOLDER}/dollarstreet_citygt.csv"
+    ["geode"]="${GT_FOLDER}/geode_citygt.csv"
 )
 
 # Create directories if they don't exist

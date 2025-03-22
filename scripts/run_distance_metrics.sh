@@ -39,10 +39,8 @@ fi
 # Run inference and evaluation for each dataset
 datasets=(
     "path/to/im2gps im2gps.json"
-    "path/to/im2gps3ktest im2gps3k.json"
-    "path/to/yfcc4k yfcc4k.json"
+    "path/to/im2gps3k im2gps3k.json"
     "path/to/gws15k gws15k.json"
-    "path/to/yfcc26k yfcc26k.json"
 )
 
 # Note: Running evaluations concurrently in the background is suitable for systems with ample memory.
@@ -63,11 +61,9 @@ done
 wait
 
 declare -A GT_DATA=(
-    ["im2gps.json"]="path/to/im2gps_citygt.csv"
-    ["im2gps3k.json"]="path/to/im2gps3k_citygt.csv"
-    ["yfcc4k.json"]="path/to/yfcc4k_citygt.csv"
-    ["yfcc26k.json"]="path/to/yfcc26k_citygt.csv"
-    ["gws15k.json"]="path/to/gws15k_citygt.csv"
+    ["im2gps.json"]="${BASE_DIR}/evaluations/distance/ground-truth/im2gps_citygt.csv"
+    ["im2gps3k.json"]="p${BASE_DIR}/evaluations/distance/ground-truth/im2gps3k_citygt.csv"
+    ["gws15k.json"]="${BASE_DIR}/evaluations/distance/ground-truth/gws15k_citygt.csv"
 )
 
 # run dist_acc_geocoded in a loop for all distance metrics
