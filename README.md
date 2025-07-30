@@ -1,4 +1,4 @@
-<h1 align="center"> GAEA: A Geolocation Aware Conversational Model</h1>
+<h1 align="center"> GAEA: A Geolocation Aware Conversational Assistant</h1>
 
 <p align="center">
     <img src="https://i.imgur.com/waxVImv.png" alt="GAEA">
@@ -8,7 +8,7 @@
    <a href="https://github.com/UCF-CRCV/GAEA/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-CC--BY--NC%204.0-blue" alt="license"></a>
 </p>
 
-[Ron Campos](https://www.linkedin.com/in/roncamposj/)* , [Ashmal Vayani](https://scholar.google.com/citations?user=K4KF1SwAAAAJ&hl=en&oi=ao)* , [Parth Parag Kulkarni](https://scholar.google.com/citations?user=OHC7c90AAAAJ&hl=en)*, [Rohit Gupta](https://scholar.google.com/citations?user=0WukQpMAAAAJ&hl=en&oi=ao) , [Mubarak Shah](https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en&oi=ao)
+[Ron Campos](https://scholar.google.com/citations?user=qPH4IRIAAAAJ&hl=en)* , [Ashmal Vayani](https://scholar.google.com/citations?user=K4KF1SwAAAAJ&hl=en&oi=ao)* , [Parth Parag Kulkarni](https://scholar.google.com/citations?user=OHC7c90AAAAJ&hl=en)*, [Rohit Gupta](https://scholar.google.com/citations?user=0WukQpMAAAAJ&hl=en&oi=ao) , [Aritra Dutta](https://scholar.google.com/citations?user=vquoiHsAAAAJ&hl=en) , [Mubarak Shah](https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en&oi=ao)
 ###### * Equally contributing first authors
 
 #### University of Central Florida
@@ -19,27 +19,27 @@
 
 <h5 align="left"> If you like our project, please give us a star ⭐ on GitHub for the latest update.</h5>
 
-#### Official GitHub repository for  `GAEA: A Geolocation Aware Conversational Model`.
+#### Official GitHub repository for  `GAEA: A Geolocation Aware Conversational Assistant`.
 ---
 
 ## 📢 Latest Updates
 - **Mar-20-25**- Technical report of GAEA is released on [arxiv]()! 🔥🔥
-- **Mar-20-25**- *GAEA-1.6M, GAEA-Bench Dataset* and codes are released. GAEA-Bench 4,000 diverse conversational QA pairs equipped with geolocalization capabilities. GAEA1.6M entails over 1.6M QA pairs for enhancing the conversational capabilities of geolocalizable LMM, GAEA. 🔥🔥
+- **Mar-20-25**- *GAEA-1.4M, GAEA-Bench Dataset* and codes are released. GAEA-Bench 4,000 diverse conversational QA pairs equipped with geolocalization capabilities. GAEA1.4M entails over 1.4M QA pairs for enhancing the conversational capabilities of geolocalizable LMM, GAEA. 🔥🔥
 
 ---
 
 ## 🏆 Highlights
 
 ![main figure](Assets/teaser.jpg)
-> <p align="justify"> <b> <span style="color: blue;">Figure: Data Collection and Annotation Pipeline.</span></b> <i>(Left): </i> GAEA-1.6M includes geographically diverse visual samples from various data sources, such as MP-16, GLD-v2, and CityGuesser68k. <i>(Middle): </i> We also incorporate OpenStreetMap (OSM) metadata and auxiliary context for each image, ranging from climate zones to geographical clues about the country. <i>(Right): </i> Using open-source LLMs and GPT-4o, we generate four diverse question-answer pairs across geolocation, reasoning, and conversational subsets.
+> <p align="justify"> <b> <span style="color: blue;">Figure: Data Collection and Annotation Pipeline.</span></b> <i>(Left): </i> GAEA-1.4M includes geographically diverse visual samples from various data sources, such as MP-16, GLD-v2, and CityGuesser68k. <i>(Middle): </i> We also incorporate OpenStreetMap (OSM) metadata and auxiliary context for each image, ranging from climate zones to geographical clues about the country. <i>(Right): </i> Using open-source LLMs and GPT-4o, we generate four diverse question-answer pairs across geolocation, reasoning, and conversational subsets.
 
 
-> **<p align="justify"> Abstract:** Image geolocalization, in which, traditionally, an AI model predicts the precise GPS coordinates of an image is a challenging task with many downstream applications. However, the user cannot utilize the model to further their knowledge other than the GPS coordinate; the model lacks an understanding of the location and the conversational ability to communicate with the user. In recent days, with tremendous progress of large multimodal models (LMMs)—proprietary and open-source—researchers attempted to geolocalize images via LMMs. However, the issues remain unaddressed; beyond general tasks, for more specialized downstream tasks, one of which is geolocalization, LMMs struggle. In this work, we propose to solve this problem by introducing a conversational model `GAEA` that can provide information regarding the location of an image, as required by a user. No large-scale dataset enabling the training of such a model exists. Thus we propose a comprehensive dataset `GAEA-1.6M` with 800K images and around 1.6M question-answer pairs constructed by leveraging OpenStreetMap (OSM) attributes and geographical context clues. For quantitative evaluation, we propose a diverse benchmark, `GAEA-Bench` comprising 4K image-text pairs to evaluate conversational capabilities equipped with diverse question types. We consider 11 state-of-the-art open-source and proprietary LMMs and demonstrate that `GAEA` significantly outperforms the best open-source model, LLaVA-OneVision by 25.69% and best proprietary model, GPT-4o by 8.28%. We will publicly release our dataset and codes. </p>
+> **<p align="justify"> Abstract:** Image geolocalization, in which, traditionally, an AI model predicts the precise GPS coordinates of an image is a challenging task with many downstream applications. However, the user cannot utilize the model to further their knowledge other than the GPS coordinate; the model lacks an understanding of the location and the conversational ability to communicate with the user. In recent days, with tremendous progress of large multimodal models (LMMs)—proprietary and open-source—researchers attempted to geolocalize images via LMMs. However, the issues remain unaddressed; beyond general tasks, for more specialized downstream tasks, one of which is geolocalization, LMMs struggle. In this work, we propose to solve this problem by introducing a conversational model `GAEA` that can provide information regarding the location of an image, as required by a user. No large-scale dataset enabling the training of such a model exists. Thus we propose a comprehensive dataset `GAEA-1.4M` with 800K images and around 1.4M question-answer pairs constructed by leveraging OpenStreetMap (OSM) attributes and geographical context clues. For quantitative evaluation, we propose a diverse benchmark, `GAEA-Bench` comprising 4K image-text pairs to evaluate conversational capabilities equipped with diverse question types. We consider 11 state-of-the-art open-source and proprietary LMMs and demonstrate that `GAEA` significantly outperforms the best open-source model, LLaVA-OneVision by 25.69% and best proprietary model, GPT-4o by 8.28%. We will publicly release our dataset and codes. </p>
 
 ## `GAEA` is the first open-source conversational model for conversational capabilities equipped with global-scale geolocalization.
 
 **Main contributions:**
-1) **`GAEA-1.6M: A Diverse Training Dataset:`** We propose GAEA-1.6M, a new dataset designed for training conversational image geolocalization models, incorporating diverse visual and contextual data.
+1) **`GAEA-1.4M: A Diverse Training Dataset:`** We propose GAEA-1.4M, a new dataset designed for training conversational image geolocalization models, incorporating diverse visual and contextual data.
 2) **`GAEA-Bench: Evaluating Conversational Geolocalization:`** To assess conversational capabilities in geolocalization, we introduce GAEA-Bench, a benchmark featuring various question-answer formats.
 3) **`GAEA: An Interactive Geolocalization Chatbot:`** We present GAEA, a conversational chatbot that extends beyond geolocalization to provide rich contextual insights about locations from images.
 4) **`Benchmarking Against State-of-the-Art LMMs:`** We quantitatively compare our model's performance against 8 open-source and 3 proprietary LMMs, including GPT-4o and Gemini-2.0-Flash.
@@ -49,12 +49,12 @@
 
 ## 🗂️ Dataset
 
-### `GAEA-1.6M` Dataset Overview
+### `GAEA-1.4M` Dataset Overview
 <p align="center">
    <img src="Assets/GeoLLM_Flow.jpg" alt="Geo-LLM-Flow"></a>
 </p>
 
-> <p align="justify"> <b> <span style="color: blue;">Figure: Data Collection and Annotation Pipeline.</span></b> <b> (Left)</b> GAEA-1.6M includes geographically diverse visual samples from various data sources, such as MP-16, GLD-v2, and CityGuesser68k. <b> (Middle)</b> We also incorporate OpenStreetMap (OSM) metadata and auxiliary context for each image, ranging from climate zones to geographical clues about the country. <b>(Right)</b> Using open-source LLMs and GPT-4o, we generate four diverse question-answer pairs across geolocation, reasoning, and conversational subsets. </p>
+> <p align="justify"> <b> <span style="color: blue;">Figure: Data Collection and Annotation Pipeline.</span></b> <b> (Left)</b> GAEA-1.4M includes geographically diverse visual samples from various data sources, such as MP-16, GLD-v2, and CityGuesser68k. <b> (Middle)</b> We also incorporate OpenStreetMap (OSM) metadata and auxiliary context for each image, ranging from climate zones to geographical clues about the country. <b>(Right)</b> Using open-source LLMs and GPT-4o, we generate four diverse question-answer pairs across geolocation, reasoning, and conversational subsets. </p>
 
 
 ### `GAEA-Bench` Curation Pipeline
@@ -92,29 +92,29 @@
 |-------------------------------------|------------|
 | **Total images**                    | 822,951    |
 | **Total cities / countries**         | 41,481 / 234 |
-| **Total questions**                  | 1,580,531  |
+| **Total questions**                  | 1,432,519  |
 | **Total geo-localization questions** | 822,951    |
-| **Total explanatory captions**       | 384,947    |
+| **Total explanatory captions**       | 236,935    |
 | **Total open-ended questions**       | 267,668    |
 | **Total multiple-choice questions**  | 48,673     |
 | **Total true/false questions**       | 56,292     |
 
 
-## Qualitative Example of GAEA-1.6M
+## Qualitative Example of GAEA-1.4M
 <p align="center">
    <img src="Assets/qual_osm_metadata.jpg" alt="GeoLLM-Bench"></a>
 </p>
 
-> <p align="justify"> <b> <span style="color: blue;">Figure:</span></b> We showcase various question-types including multiple-choice, true/false, short and long VQAs generated using an open-source model on our GAEA-1.6M dataset. We carefully select geographical tags from OSM metadata to generate diverse question types. </p>
+> <p align="justify"> <b> <span style="color: blue;">Figure:</span></b> We showcase various question-types including multiple-choice, true/false, short and long VQAs generated using an open-source model on our GAEA-1.4M dataset. We carefully select geographical tags from OSM metadata to generate diverse question types. </p>
 
 <hr />
 
 ## Training
-### Downloading and Setting Up GAEA-1.6M Dataset
-GAEA-1.6M dataset can be downloaded from our [huggingface](https://huggingface.co/datasets/ucf-crcv/GAEA-Train). GAEA-1.6M consists of 1.6M question-answer (MCQ) pairs spanning four question types: MCQs, TF, and Short and Long VQAs. The general structure of our dataset looks like the following:
+### Downloading and Setting Up GAEA-1.4M Dataset
+GAEA-1.4M dataset can be downloaded from our [huggingface](https://huggingface.co/datasets/ucf-crcv/GAEA-Train). GAEA-1.4M consists of 1.4M question-answer (MCQ) pairs spanning four question types: MCQs, TF, and Short and Long VQAs. The general structure of our dataset looks like the following:
 
 ```
-GAEA-1.6M/
+GAEA-1.4M/
 |–– MP-16/
 |   |–– ###/
 |   |   |–– ###/
@@ -135,7 +135,7 @@ GAEA-1.6M/
 
 Download the dataset
 ```shell
-# Download the GAEA-1.6M dataset
+# Download the GAEA-1.4M dataset
 cd scripts
 
 chmod +x download_gaea_train.sh
@@ -268,7 +268,7 @@ By using `GAEA` and `GAEA-Bench`, you agree not to use the dataset for any harm 
 If you find our work and this repository useful, please consider giving our repo a star and citing our paper as follows:
 ```bibtex
 @misc{campos2025gaeageolocationawareconversational,
-      title={GAEA: A Geolocation Aware Conversational Model}, 
+      title={GAEA: A Geolocation Aware Conversational Assistant}, 
       author={Ron Campos and Ashmal Vayani and Parth Parag Kulkarni and Rohit Gupta and Aritra Dutta and Mubarak Shah},
       year={2025},
       eprint={2503.16423},
