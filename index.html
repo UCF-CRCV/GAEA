@@ -134,7 +134,7 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
         <p align="justify"> 
-          Inspired by the challenges in training conversational Large Multimodal Models (LMMs) for geolocalization and the lack of comprehensive datasets in this domain, we introduce <b><i>GAEA</i></b>. This open-source conversational model uniquely combines global-scale geolocalization with rich, interactive discussions about locations, landmarks, and services. To support its training, we curate <b><i>GAEA-1.6M</i></b>, a diverse dataset of 1.6M samples, integrating images, metadata, and knowledge-driven captions. We also propose <b><i>GAEA-Bench</i></b> a benchmark designed to assess the conversational and geolocalization capabilities of LMMs. </p>
+          Inspired by the challenges in training conversational Large Multimodal Models (LMMs) for geolocalization and the lack of comprehensive datasets in this domain, we introduce <b><i>GAEA</i></b>. This open-source conversational model uniquely combines global-scale geolocalization with rich, interactive discussions about locations, landmarks, and services. To support its training, we curate <b><i>GAEA-1.4M</i></b>, a diverse dataset of 1.4M samples, integrating images, metadata, and knowledge-driven captions. We also propose <b><i>GAEA-Bench</i></b> a benchmark designed to assess the conversational and geolocalization capabilities of LMMs. </p>
         <!-- <br> -->
 
 
@@ -145,7 +145,7 @@
             <!-- </h4> -->
             
             <div class="content has-text-justified">
-                <p align="justify"> <b> <span>Figure: Data Collection and Annotation Pipeline.</span></b> <b> <span style="color: blue;">(Left)</span></b> GAEA-1.6M includes geographically diverse visual samples from various data sources, such as MP-16, GLD-v2, and CityGuesser68k. <b> <span style="color: blue;">(Middle)</span></b> We also incorporate OpenStreetMap (OSM) metadata and auxiliary context for each image, ranging from climate zones to geographical clues about the country. <b> <span style="color: blue;">(Right)</span></b> Using open-source LLMs and GPT-4o, we generate four diverse question-answer pairs across geolocation, reasoning, and conversational subsets. </p>
+                <p align="justify"> <b> <span>Figure: Data Collection and Annotation Pipeline.</span></b> <b> <span style="color: blue;">(Left)</span></b> GAEA-1.4M includes geographically diverse visual samples from various data sources, such as MP-16, GLD-v2, and CityGuesser68k. <b> <span style="color: blue;">(Middle)</span></b> We also incorporate OpenStreetMap (OSM) metadata and auxiliary context for each image, ranging from climate zones to geographical clues about the country. <b> <span style="color: blue;">(Right)</span></b> Using open-source LLMs and GPT-4o, we generate four diverse question-answer pairs across geolocation, reasoning, and conversational subsets. </p>
 
 
             </div>
@@ -188,7 +188,7 @@
           <p>
           <h5> <b> Main contributions: </b></h5>
            <ol>
-            <li> <b>GAEA-1.6M: A Diverse Training Dataset. </b> We propose GAEA-1.6M, a new dataset designed for training conversational image geolocalization models, incorporating diverse visual and contextual data.</li>
+            <li> <b>GAEA-1.4M: A Diverse Training Dataset. </b> We propose GAEA-1.4M, a new dataset designed for training conversational image geolocalization models, incorporating diverse visual and contextual data.</li>
             <li> <b>GAEA-Bench: Evaluating Conversational Geolocalization. </b> To assess conversational capabilities in geolocalization, we introduce GAEA-Bench, a benchmark featuring various question-answer formats.</li>
             <li> <b>GAEA: An Interactive Geolocalization Chatbot.</b> We present GAEA, a conversational chatbot that extends beyond geolocalization to provide rich contextual insights about locations from images.</li>
             <li> <b>Benchmarking Against State-of-the-Art LMMs.</b> We quantitatively compare our model’s performance against 8 open-source and 3 proprietary LMMs, including GPT-4o and Gemini-2.0-Flash.</li>
@@ -209,12 +209,12 @@
     <!-- Latent space editing applications -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3 has-text-centered">GAEA-1.6M Dataset Overview</h2>
+        <h2 class="title is-3 has-text-centered">GAEA-1.4M Dataset Overview</h2>
         
         <div class="content has-text-centered">
             <img src="./static/images/GeoLLM_Flow.jpg"  style="max-width:100%">
               <div class="content has-text-justified">
-                <p align="justify"> <b> <span>Figure: Data Collection and Annotation Pipeline.</span></b> <b> <span style="color: blue;">(Left)</span></b> GAEA-1.6M includes geographically diverse visual samples from various data sources, such as MP-16, GLD-v2, and CityGuesser68k. <b> <span style="color: blue;">(Middle)</span></b> We also incorporate OpenStreetMap (OSM) metadata and auxiliary context for each image, ranging from climate zones to geographical clues about the country. <b> <span style="color: blue;">(Right)</span></b> Using open-source LLMs and GPT-4o, we generate four diverse question-answer pairs across geolocation, reasoning, and conversational subsets. </p>
+                <p align="justify"> <b> <span>Figure: Data Collection and Annotation Pipeline.</span></b> <b> <span style="color: blue;">(Left)</span></b> GAEA-1.4M includes geographically diverse visual samples from various data sources, such as MP-16, GLD-v2, and CityGuesser68k. <b> <span style="color: blue;">(Middle)</span></b> We also incorporate OpenStreetMap (OSM) metadata and auxiliary context for each image, ranging from climate zones to geographical clues about the country. <b> <span style="color: blue;">(Right)</span></b> Using open-source LLMs and GPT-4o, we generate four diverse question-answer pairs across geolocation, reasoning, and conversational subsets. </p>
             </div>
         </div>
 
@@ -234,7 +234,7 @@
             <p class="content has-text-justified">
 
             <div class="content has-text-justified">
-                <p align="justify"> <b> <span>Figure: Overview of <i>GAEA-Bench</i>.</span></b> GAEA-Bench is designed to evaluate the conversational abilities of various LMMs across different question types, including MCQs, T/F, and both short and long VQAs. We have carefully selected a subset of 4k samples from MP-16 and generated corresponding OSM metadata to generate QA pairs using GPT-4o. GAEA-Bench aims to fill the gap in conversational benchmarks by incorporating geolocalization capabilities. </p>
+                <p align="justify"> <b> <span>Figure: Overview of <i>GAEA-Bench</i>.</span></b> GAEA-Bench is designed to evaluate the conversational abilities of various LMMs across different question types, including MCQs, T/F, and both short and long VQAs. We have carefully selected a subset of 3.5k samples from MP-16 and generated corresponding OSM metadata to generate QA pairs using GPT-4o. GAEA-Bench aims to fill the gap in conversational benchmarks by incorporating geolocalization capabilities. </p>
             </div>
 
 
@@ -306,10 +306,10 @@
 
         <div class="content has-text-justified">
           <div class="content has-text-centered">
-            <h3 class="title is-3 has-text-centered">Qualitative Example of GAEA-1.6M</h3>
+            <h3 class="title is-3 has-text-centered">Qualitative Example of GAEA-1.4M</h3>
           <img src="./static/images/qual_osm_metadata.jpg" style="max-width:100%"> 
           </div>
-          <p align="justified"> <b> <span>Figure</span></b>: We showcase various question-types including multiple-choice, true/false, short and long VQAs generated using an open-source model on our GAEA-1.6M dataset. We carefully select geographical tags from OSM metadata to generate diverse question types. </p>
+          <p align="justified"> <b> <span>Figure</span></b>: We showcase various question-types including multiple-choice, true/false, short and long VQAs generated using an open-source model on our GAEA-1.4M dataset. We carefully select geographical tags from OSM metadata to generate diverse question types. </p>
       </div>
       </div>
           
@@ -378,7 +378,7 @@
         <h3 class="title is-4 has-text-justified">Conclusion</h3>
         <div class="content has-text-justified">
           <p>
-            We introduced GAEA, the first interactive conversational model with specialized geolocation capabilities, explicitly trained on a large-scale conversational dataset, GAEA-1.6M. We meticulously designed the dataset to enhance GAEA’s reasoning, conversational abilities, and geolocation accuracy. We curated geolocalizable images from MP-16, GLDv2, and CityGuessr68k, enriching them with auxiliary context and metadata, such as geographic clues, and climate zones. In addition to a high-quality instruction set, we present GAEA-Bench, a comprehensive benchmark that evaluates LMMs across multiple question types, including MCQs, True/False, short- and long-VQAs. Our results show that GAEA outperforms recent LMMs on GAEA-Bench, demonstrating strong geolocation and conversational capabilities by leveraging OpenStreetMap (OSM) data. These findings establish GAEA as a strong baseline for future research in geolocalization. </p>
+            We introduced GAEA, the first interactive conversational model with specialized geolocation capabilities, explicitly trained on a large-scale conversational dataset, GAEA-1.4M. We meticulously designed the dataset to enhance GAEA’s reasoning, conversational abilities, and geolocation accuracy. We curated geolocalizable images from MP-16, GLDv2, and CityGuessr68k, enriching them with auxiliary context and metadata, such as geographic clues, and climate zones. In addition to a high-quality instruction set, we present GAEA-Bench, a comprehensive benchmark that evaluates LMMs across multiple question types, including MCQs, True/False, short- and long-VQAs. Our results show that GAEA outperforms recent LMMs on GAEA-Bench, demonstrating strong geolocation and conversational capabilities by leveraging OpenStreetMap (OSM) data. These findings establish GAEA as a strong baseline for future research in geolocalization. </p>
 
             <br>
             <p>For additional details about GAEA-Bench evaluation and experimental results of GAEA, please refer to our main paper. Thank you! </p>
