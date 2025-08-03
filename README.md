@@ -8,7 +8,7 @@
    <a href="https://github.com/UCF-CRCV/GAEA/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-CC--BY--NC%204.0-blue" alt="license"></a>
 </p>
 
-[Ron Campos](https://scholar.google.com/citations?user=qPH4IRIAAAAJ&hl=en)* , [Ashmal Vayani](https://scholar.google.com/citations?user=K4KF1SwAAAAJ&hl=en&oi=ao)* , [Parth Parag Kulkarni](https://scholar.google.com/citations?user=OHC7c90AAAAJ&hl=en)*, [Rohit Gupta](https://scholar.google.com/citations?user=0WukQpMAAAAJ&hl=en&oi=ao) , [Aritra Dutta](https://scholar.google.com/citations?user=vquoiHsAAAAJ&hl=en) , [Mubarak Shah](https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en&oi=ao)
+[Ron Campos](https://scholar.google.com/citations?user=qPH4IRIAAAAJ&hl=en)* , [Ashmal Vayani](https://scholar.google.com/citations?user=K4KF1SwAAAAJ&hl=en&oi=ao)* , [Parth Parag Kulkarni](https://scholar.google.com/citations?user=OHC7c90AAAAJ&hl=en)*, [Rohit Gupta](https://scholar.google.com/citations?user=0WukQpMAAAAJ&hl=en&oi=ao) , [Aizan Zafar](https://scholar.google.com/citations?user=iqYHEnsAAAAJ&hl=en&oi=ao), [Aritra Dutta](https://scholar.google.com/citations?user=vquoiHsAAAAJ&hl=en) , [Mubarak Shah](https://scholar.google.com/citations?user=p8gsO3gAAAAJ&hl=en&oi=ao)
 ###### * Equally contributing first authors
 
 #### University of Central Florida
@@ -23,7 +23,8 @@
 ---
 
 ## 📢 Latest Updates
-- **Mar-20-25**- Technical report of GAEA is released on [arxiv]()! 🔥🔥
+- **Aug-02-25**- Datasets and Model are released [HuggingFace](https://huggingface.co/collections/ucf-crcv/gaea-67d514a61d48eb1708b13a08)! 🔥🔥
+- **Mar-20-25**- Technical report of GAEA is released on [arxiv](https://arxiv.org/abs/2503.16423)! 🔥🔥
 - **Mar-20-25**- *GAEA-1.4M, GAEA-Bench Dataset* and codes are released. GAEA-Bench 4,000 diverse conversational QA pairs equipped with geolocalization capabilities. GAEA1.4M entails over 1.4M QA pairs for enhancing the conversational capabilities of geolocalizable LMM, GAEA. 🔥🔥
 
 ---
