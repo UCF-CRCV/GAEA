@@ -32,7 +32,7 @@
 ## 🏆 Highlights
 
 ![main figure](Assets/teaser.jpg)
-> <p align="justify"> <b> <span style="color: blue;">Figure: Data Collection and Annotation Pipeline.</span></b> <i>(Left): </i> GAEA-1.4M includes geographically diverse visual samples from various data sources, such as MP-16, GLD-v2, and CityGuesser68k. <i>(Middle): </i> We also incorporate OpenStreetMap (OSM) metadata and auxiliary context for each image, ranging from climate zones to geographical clues about the country. <i>(Right): </i> Using open-source LLMs and GPT-4o, we generate four diverse question-answer pairs across geolocation, reasoning, and conversational subsets.
+> <p align="justify"> <b> <span style="color: blue;">Figure: We compare the performance of various LMMs on the geographically-grounded visual-question-answering task, included in our new GAEA-Bench benchmark. Most LMMs can describe the Wat Pho statue, but only GAEA, our Geolocation Aware Assistant, retrieves the correct nearby cafe, Cafe Amazon <i>(left)</i>. Qualitative SVQA comparison showing GAEA’s ability to provide accurate, location-specific answers where other LMMs fail <i>(right)</i>.
 
 
 > **<p align="justify"> Abstract:** Image geolocalization, in which, traditionally, an AI model predicts the precise GPS coordinates of an image is a challenging task with many downstream applications. However, the user cannot utilize the model to further their knowledge other than the GPS coordinate; the model lacks an understanding of the location and the conversational ability to communicate with the user. In recent days, with tremendous progress of large multimodal models (LMMs)—proprietary and open-source—researchers attempted to geolocalize images via LMMs. However, the issues remain unaddressed; beyond general tasks, for more specialized downstream tasks, one of which is geolocalization, LMMs struggle. In this work, we propose to solve this problem by introducing a conversational model `GAEA` that can provide information regarding the location of an image, as required by a user. No large-scale dataset enabling the training of such a model exists. Thus we propose a comprehensive dataset `GAEA-1.4M` with 800K images and around 1.4M question-answer pairs constructed by leveraging OpenStreetMap (OSM) attributes and geographical context clues. For quantitative evaluation, we propose a diverse benchmark, `GAEA-Bench` comprising 4K image-text pairs to evaluate conversational capabilities equipped with diverse question types. We consider 11 state-of-the-art open-source and proprietary LMMs and demonstrate that `GAEA` significantly outperforms the best open-source model, LLaVA-OneVision by 25.69% and best proprietary model, GPT-4o by 8.28%. We will publicly release our dataset and codes. </p>
@@ -63,7 +63,7 @@
    <img src="Assets/GeoLLM-Bench.jpg" alt="GeoLLM-Bench"></a>
 </p>
 
-> <p align="justify"> <b> <span style="color: blue;">Figure: Overview of `GAEA-Bench`.</span></b> `GAEA-Bench` is designed to evaluate the conversational abilities of various LMMs across different question types, including MCQs, T/F, and both short and long VQAs. We have carefully selected a subset of 4k samples from MP-16 and generated corresponding OSM metadata to generate QA pairs using GPT-4o. `GAEA-Bench` aims to fill the gap in conversational benchmarks by incorporating geolocalization capabilities. </p>
+> <p align="justify"> <b> <span style="color: blue;">Figure: Overview of `GAEA-Bench`.</span></b> `GAEA-Bench` is designed to evaluate the conversational abilities of various LMMs across different question types, including MCQs, T/F, and both short and long VQAs. We have carefully selected a subset of 3.5k samples from MP-16 and generated corresponding OSM metadata to generate QA pairs using GPT-4o. `GAEA-Bench` aims to fill the gap in conversational benchmarks by incorporating geolocalization capabilities. </p>
 
 <hr />
 
@@ -73,7 +73,7 @@
    <img src="Assets/GeoLLM_Eval_Pipelin_conv.jpg" width="400" alt="GeoLLM-Bench"></a>
 </p>
 
-> <p align="justify"> <b> <span style="color: blue;">Figure:</span></b> The Evaluation pipeline highlights various question types we introduce in our <i>GAEA-Bench</i>. We use GPT-4o as a judge to score such responses on different criterion. </p>
+> <p align="justify"> <b> <span style="color: blue;">Figure:</span></b> Evaluation pipeline for conversational benchmarking on GAEA-Bench, highlighting various question types we introduce in our GAEA-Bench. Each question type is evaluated with various defined criteria using GPT-4o as a judge. For instance, SVQA is evaluated against <i>Accuracy</i> and <i>Correctness</i>, and LVQA is evaluated on <i>Consistency</i>, <i>Fluency</i>, and <i>Relevancy</i> criteria. </p>
 
 <hr />
 
@@ -83,7 +83,7 @@
    <img src="Assets/GeoLLM_Eval_Pipelin_pred.jpg" width="500" alt="GeoLLM-Bench"></a>
 </p>
 
-> <p align="justify"> <b> <span style="color: blue;">Figure:</span></b> Our classification accuracy pipeline evaluates city and country predictions by comparing them against ground truth annotations derived from GPS coordinates, with GPT-4o serving as the evaluator. </p>
+> <p align="justify"> <b> <span style="color: blue;">Figure:</span></b> Classification and distance threshold accuracy computation pipeline simultaneously evaluates geolocalization performance at city and country level by comparing model predictions with ground truth annotations derived from reverse-geocoding GPS coordinates and accuracy at different distance thresholds by geocoding predictions of the model. </p>
 
 <hr />
 
@@ -106,7 +106,7 @@
    <img src="Assets/qual_osm_metadata.jpg" alt="GeoLLM-Bench"></a>
 </p>
 
-> <p align="justify"> <b> <span style="color: blue;">Figure:</span></b> We showcase various question-types including multiple-choice, true/false, short and long VQAs generated using an open-source model on our GAEA-1.4M dataset. We carefully select geographical tags from OSM metadata to generate diverse question types. </p>
+> <p align="justify"> <b> <span style="color: blue;">Figure:</span></b> Examples of the four question types in our dataset: SVQA, MCQ, TF, and LVQA. Each type targets a distinct reasoning skill grounded in geographical, visual, or contextual understanding. Our dataset has three categories, including Geolocalization, Reasoning (LVQA), and Conversational (SVQA, MCQ, TF) QAs, as shown in the figure. </p>
 
 <hr />
 
@@ -238,7 +238,8 @@ chmod +x run_cc_preds.sh #make script executable.
    <img src="Assets/question_types_stats.jpg" width="500" alt="Question_Types"></a>
 </p>
 
-> <p align="justify"> <b> <span style="color: blue;">Figure:</span></b> We benchmark 11 open-source and proprietary LMMs on <i>GAEA-Bench</i>. Notably, <i>GAEA</i> outperforms all open-source models and fares higher than the proprietary models on decision making questions <i>(MCQs and TFs)</i>. We provide the relative performance change for each model compared to `GAEA`. </p>
+> <p align="justify"> <b> <span style="color: blue;">Figure:</span></b> We benchmark 11 open-source and proprietary LMMs on <i>GAEA-Bench</i>. Notably, <i>GAEA</i> outperforms all open-source models and fares higher than the proprietary models on decision-making questions (MCQs and TFs). We provide the relative performance change for each model compared to `GAEA`. We use GPT-4o as a judge for evaluation, and it has been documented that LLMs as judges prefer their long-form output; hence, the scores for these models are likely overestimated. </p>
+
 
 <hr />
 
