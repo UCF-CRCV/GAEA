@@ -1,4 +1,4 @@
-<h1 align="center"> GAEA: A Geolocation Aware Conversational Assistant</h1>
+<h1 align="center"> GAEA: A Geolocation Aware Conversational Assistant [WACV 2026🔥] </h1>
 
 <p align="center">
     <img src="https://i.imgur.com/waxVImv.png" alt="GAEA">
