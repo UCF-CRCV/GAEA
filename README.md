@@ -23,6 +23,7 @@
 ---
 
 ## 📢 Latest Updates
+- **Sep-05-25**- GAEA is accepted at WACV 2026! 🔥🔥
 - **Aug-02-25**- Datasets and Model are released [HuggingFace](https://huggingface.co/collections/ucf-crcv/gaea-67d514a61d48eb1708b13a08)! 🔥🔥
 - **Mar-20-25**- Technical report of GAEA is released on [arxiv](https://arxiv.org/abs/2503.16423)! 🔥🔥
 - **Mar-20-25**- *GAEA-1.4M, GAEA-Bench Dataset* and codes are released. GAEA-Bench 4,000 diverse conversational QA pairs equipped with geolocalization capabilities. GAEA1.4M entails over 1.4M QA pairs for enhancing the conversational capabilities of geolocalizable LMM, GAEA. 🔥🔥
